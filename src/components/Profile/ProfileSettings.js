@@ -63,10 +63,6 @@ const ProfileSttings = () => {
   return (
     <form className='settings-form' onSubmit={handleChangeProfile}>
      <div className='data'>
-        {/* <label className='data-item'>
-          <div className='data-item-title'>Email</div>
-          <input className='input' defaultValue={myProfile.email}/>
-        </label> */}
         <label className='data-item'>
           <div className='data-item-title'>First name/ Last name</div>
           <div className='input-wrapper'>
@@ -95,10 +91,6 @@ const ProfileSttings = () => {
               <Option value="Kyrgyzstan">Kyrgyzstan</Option>
               <Option value="USA">USA</Option>
           </Select>
-          {/* <div className='input-wrapper'>
-            <input className='input' defaultValue={country}/>
-            <input className='input' defaultValue={city}/>
-          </div> */}
         </label>
         <label className='data-item'>
           <div className='data-item-title'>Phone</div>

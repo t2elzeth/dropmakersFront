@@ -22,14 +22,8 @@ import { message } from 'antd';
 
 export const handleProfileActionCreator = () => dispatch => {
   dispatch({ type: GET_PROFILE_LOADING })
-  const token = localStorage.getItem('token')
-  auth.get('/users/me/', {
-    headers: {
-      'Authorization': `${token}`
-    }
-  })
+  auth.get('/users/me/')
     .then(({data}) => {
-      console.log(data)
       dispatch(getProfile(data))
       dispatch(checkIsLog(true))
       dispatch({ type: GET_PROFILE_SUCCESS})

@@ -42,8 +42,6 @@ const AccessControl = () => {
     setAccessList(value)
   }
 
-  console.log(listControlThem.length)
-
   return (
       <>
         <section className='access-control container'>

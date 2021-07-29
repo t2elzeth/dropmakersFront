@@ -7,25 +7,18 @@ import {auth} from '../../axios/axios';
 import { message } from 'antd';
 
 export const handleAddControlActionCreator = (performer_email, setIsModalVisible, setReload) => dispatch => {
-  const token = localStorage.getItem('token')
   let action = 'update'
   if(performer_email) {
     dispatch({type: ADD_CONTROL_LOADING})
-    auth.post('/users/me/shared_actions/', {performer_email,  action}, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': token,
-      }
-    })
-      .then((res) => {
-        console.log('success', res)
+    auth.post('/users/me/shared_actions/', {performer_email,  action})
+      .then(async () => {
         dispatch({type: ADD_CONTROL_SUCCESS})
         setReload(true)
         setIsModalVisible(false)
-        message.success('Вы успешно добавили пользователя!')
+        await message.success('Вы успешно добавили пользователя!')
       })
-      .catch((e) => {
-        message.error(e.response ? e.response.data.performer_email[0] : e.message)
+      .catch(async (e) => {
+        await message.error(e.response ? e.response.data.performer_email[0] : e.message)
         dispatch({type: ADD_CONTROL_FAILED})
       })
   }
@@ -33,17 +26,11 @@ export const handleAddControlActionCreator = (performer_email, setIsModalVisible
 }
 
 export const handleGetControlMeActionCreator = () => dispatch => {
-  const token = localStorage.getItem('token')
   dispatch({type: GET_CONTROL_ME_LOADING})
-  auth.get('/users/me/shared_actions/as_target/', {
-    headers: {
-      'Authorization': `${token}`
-    }
-  })
+  auth.get('/users/me/shared_actions/as_target/')
     .then(({data}) => {
       dispatch(getControlListMe(data))
       dispatch({type: GET_CONTROL_ME_SUCCESS})
-      console.log(data)
     })
     .catch(e => {
       console.log(e)
@@ -52,38 +39,26 @@ export const handleGetControlMeActionCreator = () => dispatch => {
   }
   
 export const handleDeleteControlActionCreator = (id, setReload) => dispatch => {
-  const token = localStorage.getItem('token')
   dispatch({type: DELETE_CONTROL_LOADING})
-  auth.delete(`/users/me/shared_actions/${id}`, {
-    headers: {
-      'Authorization': `${token}`
-    }
-  })
-    .then((res) => {
+  auth.delete(`/users/me/shared_actions/${id}/`)
+    .then(async () => {
       dispatch({type: DELETE_CONTROL_SUCCESS})
       setReload(true)
-      message.success('Success delete!')
-      console.log(res)
+      await message.success('Successfully deleted!')
     })
-    .catch(e => {
-      console.log(e)
+    .catch(async (e) => {
+      console.log(e.response.data)
       dispatch({type: DELETE_CONTROL_FAILED})
-      message.error('Error delete!')
+      await message.error('An error occurred while trying to delete!')
     })
   }
 
 export const handleGetControlThemActionCreator = () => dispatch => {
-  const token = localStorage.getItem('token')
   dispatch({type: GET_CONTROL_THEM_LOADING})
-  auth.get('/users/me/shared_actions/as_performer/', {
-    headers: {
-      'Authorization': `${token}`
-    }
-  })
+  auth.get('/users/me/shared_actions/as_performer/')
     .then(({data}) => {
       dispatch(getControlListThem(data))
       dispatch({type: GET_CONTROL_THEM_SUCCESS})
-      console.log(data)
     })
     .catch(e => {
       console.log(e)
