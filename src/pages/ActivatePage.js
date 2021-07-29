@@ -19,12 +19,14 @@ const ActivatePage = () => {
   const dispatch = useDispatch()
   let history = useHistory();
 
-  const handleRedirect = () => {
-    history.push('');
-  }
+
   useEffect(() => {
+    const handleRedirect = () => {
+      history.push('');
+    }
+
    dispatch(handleActivateActionCreator(uid, token, handleRedirect))
-  }, [dispatch, uid, token])
+  }, [dispatch, uid, token, history])
   
 
   return (

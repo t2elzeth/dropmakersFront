@@ -22,7 +22,7 @@ const PasswordSettings = () => {
       dispatch(handleProfileActionCreator())
       setReload(false)
     }
-  }, [reload])
+  }, [dispatch, reload])
 
   const handlePasswordSettings = (e) => {
     e.preventDefault()

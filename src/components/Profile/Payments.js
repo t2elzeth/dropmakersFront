@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { handlePaypalActionCreator } from '../../store/actions/payment';
 
 import { MoneyIcon, PaymentPaypalModal } from '../index';

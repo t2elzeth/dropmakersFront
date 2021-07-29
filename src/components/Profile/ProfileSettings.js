@@ -15,6 +15,8 @@ const ProfileSttings = () => {
     failed: state.profile.post.failed,
   }))
 
+  const dispatch = useDispatch()
+
   const [reload, setReload] = useState(false)
   const [fileName, setFileName] = useState('')
   const [files, setFiles] = useState([])
@@ -28,9 +30,8 @@ const ProfileSttings = () => {
       dispatch(handleProfileActionCreator())
       setReload(false)
     }
-  }, [reload])
+  }, [dispatch, reload])
 
-  const dispatch = useDispatch()
 
   const handleSelectCountry = (value) => {
     setCountry(value)
@@ -132,11 +133,10 @@ const ProfileSttings = () => {
         <div className='avatar-title'>{fileName || 'Файл не выбран'}</div>
        <input
           id='avatar-change'
-          className='input'
+          className='input avatar-btn'
           type='file'
           name='avatar'
           accept='image/x-png,image/jpeg'
-          className='avatar-btn'
           onChange={(e) => handleFile(e.target.files[0], e.target.files[0].name)}
         />
      </div>
