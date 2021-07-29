@@ -1,4 +1,4 @@
-import {auth} from '../../axios/axios';
+// import {auth} from '../../axios/axios';
 
 export const handleGoogleActionCreator = () => dispatch => {
   window.gapi.load('auth2', function() {
@@ -19,7 +19,7 @@ export const handleGoogleSignInActionCreator = () => dispatch => {
   const GoogleAuth = window.gapi.auth2.getAuthInstance()
     GoogleAuth.signIn()
     .then(googleUser => {
-      const profile = googleUser.getBasicProfile()
+      // const profile = googleUser.getBasicProfile()
       const id_token = googleUser.getAuthResponse().id_token;
       console.log('code=' + id_token)
       // console.log('Full Name: ' + profile.getName());

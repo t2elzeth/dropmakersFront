@@ -1,6 +1,6 @@
 import { ebay } from "../../axios/axios";
 import {GET_RESULTS, GET_RESULTS_FAILED, GET_RESULTS_LOADING, GET_RESULTS_SUCCESS} from "../actionTypes";
-import results from "../reducers/results";
+// import results from "../reducers/results";
 
 export const handleResultsAcionCreater = (query) => dispatch => {
   dispatch({type: GET_RESULTS_LOADING})

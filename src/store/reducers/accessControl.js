@@ -38,12 +38,12 @@ const reducer = (state = initialState, action) => {
     case GET_CONTROL_LIST_ME:
       return {
         ...state,
-        accessControlListMe: action. accessControlListMe
+        accessControlListMe: action.accessControlListMe
       }
     case GET_CONTROL_LIST_THEM:
       return {
         ...state,
-        accessControlListThem: action. accessControlListThem
+        accessControlListThem: action.accessControlListThem
       }
     case GET_CONTROL_ME_LOADING:
       return {
