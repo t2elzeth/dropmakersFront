@@ -1,0 +1,47 @@
+import {
+  AccessControlPage,
+  DashboardPage,
+  ExporteBayPage,
+  ExportOrdersPage,
+  InventoryBrandsPage,
+  InventoryChangesPage, InventoryListsPage,
+  InventoryPage,
+  InventorySettingsPage,
+  MailPage,
+  NotificationsPage,
+  OrdersPage,
+  OrdersReturnsPage,
+  PaymentsPage,
+  ProfileSettingsPage,
+  SearchPage,
+  StorePage
+} from "./routes/routes";
+
+ const privateRoutes = [
+  {path: '/dashboard', component: <DashboardPage />},
+  {path: '/search', component: <SearchPage />},
+  {path: '/notifications', component: <NotificationsPage />},
+  {path: '/myorders', component: <OrdersPage />},
+  {path: '/myorders/returns', component: <OrdersReturnsPage />},
+  {path: '/mail', component: <MailPage />},
+  {path: '/mail/other', component: <MailPage />},
+  {path: '/mail/send', component: <MailPage />},
+  {path: '/mail/replies', component: <MailPage />},
+  {path: '/mail/direct', component: <MailPage />},
+  {path: '/mail/automatic', component: <MailPage />},
+  {path: '/settings', component: <ProfileSettingsPage />},
+  {path: '/payments', component: <PaymentsPage />},
+  {path: '/access-control', component: <AccessControlPage />},
+  {path: '/store', component: <StorePage />},
+  {path: '/myinventory', component: <InventoryPage />},
+  {path: '/myinventory/settings', component: <InventorySettingsPage />},
+  {path: '/myinventory/changes', component: <InventoryChangesPage />},
+  {path: '/myinventory/export/amazon', component: <ExporteBayPage from='Amazon' to='eBay' />},
+  {path: '/myinventory/export/eBay', component: <ExporteBayPage from='eBay' to='Amazon' />},
+  {path: '/myinventory/export/orders', component: <ExportOrdersPage />},
+  {path: '/myinventory/brands', component: <InventoryBrandsPage />},
+  {path: '/myinventory/whitelists', component: <InventoryListsPage title='White' />},
+  {path: '/myinventory/blacklists', component: <InventoryListsPage title='Black' />},
+]
+
+export default privateRoutes;

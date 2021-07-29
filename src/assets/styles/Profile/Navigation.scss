@@ -38,7 +38,7 @@
       height: 35px;
       transition: .5s;
     }
-    &-item > a {
+    &-item > a, span {
       padding: 0 10px;
       @include fs16;
       width: 100%;

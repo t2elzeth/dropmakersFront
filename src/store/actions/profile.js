@@ -35,7 +35,7 @@ export const handleProfileActionCreator = () => dispatch => {
       dispatch({ type: GET_PROFILE_SUCCESS})
     })
     .catch((e) => {
-      console.log(e.message)
+      console.log(e.response.data)
       dispatch(checkIsLog(false))
       dispatch(getToken(''))
       dispatch({ type: GET_PROFILE_FAILED })

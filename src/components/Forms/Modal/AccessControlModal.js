@@ -9,18 +9,14 @@ const AccessControlModal = ({isModalVisible, setIsModalVisible, setReload}) => {
 
   const dispatch = useDispatch()
   
-  const handleOk = () => {
-    setIsModalVisible(false);
-  };
+  const handleOk = () => setIsModalVisible(false);
 
   const handleAddAccessControl = (e) => {
     e.preventDefault()
     dispatch(handleAddControlActionCreator(performer_email, setIsModalVisible, setReload))
   }
 
-  const handleCancel = () => {
-    setIsModalVisible(false);
-  };
+  const handleCancel = () => setIsModalVisible(false);
 
   return (
     <Modal 

@@ -32,7 +32,7 @@ const Navigation = () => {
           <NavLink to='/access-control' className='dropdown-item' exact>Access Control</NavLink>
         </div>
         <div className='dropdown-item'> 
-          <a onClick={handleLogout} className='dropdown-item'>Log Out</a>
+          <span onClick={handleLogout} className='dropdown-item'>Log Out</span>
         </div>
       </div>
     </nav>

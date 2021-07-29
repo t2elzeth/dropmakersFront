@@ -46,7 +46,7 @@ const Burger = () => {
           </div>
           <ul>
             <li className='private-item'>
-              <div className='link-wrapper'><NavLink to='/dashboard' className='link' onClick={handleBurger} onClick={handleBurger} exact>Dashboard</NavLink></div>
+              <div className='link-wrapper'><NavLink to='/dashboard' className='link' onClick={handleBurger} exact>Dashboard</NavLink></div>
             </li>
             <li className='private-item'>
               <div className='link-wrapper'><NavLink to='/search' className='link' onClick={handleBurger} exact>Search</NavLink></div>
