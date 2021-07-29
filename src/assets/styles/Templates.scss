@@ -1,0 +1,157 @@
+@import './Variables.scss';
+
+@mixin btn {
+    @include flexCenter;
+    position: relative;
+    background: $blueBg;
+    border-radius: 8px;
+    color: $lightBg;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    transition: all 600ms;
+    &:focus {
+      outline: 0;
+    }
+  // &:hover {
+  //   background: $blueLightBg;
+  // }
+}
+
+@mixin btn2 {
+  @include flexCenter;
+  border: none;
+  height: 53px;
+  background: $yellowBg;
+  cursor: pointer;
+  color: $darkTextBg;
+  @include fs20;
+  &:focus {
+    outline: 0;
+  }
+}
+
+@mixin title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 59px;
+  @media screen and (max-width: 1199px) {
+    font-size: 38px;
+    line-height: 46px;
+  }
+}
+
+@mixin input {
+  padding: 0 5px;
+  font-size: 15px;
+  line-height: 19px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  color: $darkTextBg;
+  outline: none;
+  border: none;
+}
+
+@mixin select {
+  height: 40px;
+  width: 200px;
+  border-radius: 6px;
+  background: $lightBg;
+  font-size: 15px;
+  line-height: 19px;
+  .ant-select-selector {
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    input {
+      height: 40px;
+    }
+  }
+}
+
+@mixin fs14 {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@mixin fs15 {
+  font-size: 15px;
+  line-height: 18px; 
+}
+
+@mixin fs16 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@mixin fs18 {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+@mixin fs20 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin fs22 {
+  font-size: 22px;
+  line-height: 27px;
+}
+
+@mixin fs24 {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+@mixin fs28 {
+  font-size: 28px;
+  line-height: 34px;
+}
+
+@mixin fs30 {
+  font-size: 30px;
+  line-height: 37px;
+}
+
+@mixin fs36 {
+  font-size: 36px;
+  line-height: 140%;
+}
+
+@mixin fs48 {
+  font-size: 48px;
+  line-height: 59px;
+}
+
+@mixin flexAlignCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexCenterColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

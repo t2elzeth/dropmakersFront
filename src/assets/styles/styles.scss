@@ -1,0 +1,62 @@
+@import './Initial.scss';
+@import './Header.scss';
+@import './Footer.scss';
+@import './Templates.scss';
+@import './Variables.scss';
+
+@import './MainPage/Description.scss';
+@import './MainPage/Steps.scss';
+@import './MainPage/Features.scss';
+@import './MainPage/Requirements.scss';
+@import './MainPage/Login.scss';
+@import './MainPage/About.scss';
+
+@import './DashboardPage/Circle.scss';
+@import './DashboardPage/Dashboard.scss';
+
+@import './NotificationsPage/NotificationsPage.scss';
+
+@import './Forms/ContactForm.scss';
+@import './Forms/SignForm.scss';
+@import './Forms/SearchProduct.scss';
+@import './Forms/SearchOrder.scss';
+@import './Forms/SearchNotifications.scss';
+@import './Forms/SearchMail.scss';
+@import './Forms/SearchMyinventory.scss';
+@import './Forms/SearchInventoryChanges.scss';
+@import './Forms/SearchList.scss';
+@import './Forms/Modal.scss';
+@import './Forms/Buttons.scss';
+
+@import './OrdersPage/OrdersPage.scss';
+@import './OrdersPage/OrdersReturnsPage.scss';
+
+@import './Cards/ProductCard.scss';
+@import './Cards/OrderCard.scss';
+@import './Cards/MyinventoryCard.scss';
+@import './Cards/InventorySettingsCard.scss';
+@import './Cards/BrandCard.scss';
+@import './Cards/AccessControlCard.scss';
+
+@import './InventoriesPage/InventoriesPage.scss';
+@import './InventoriesPage/BrandsPage.scss';
+@import './InventoriesPage/ListsPage.scss';
+
+@import './SearchPage/SearchPage.scss';
+@import './ActivationPage/Activation.scss';
+@import './MailPage/MailPage.scss';
+
+@import './Profile/Navigation.scss';
+@import './Profile/Settings.scss';
+@import './Profile/Payments.scss';
+@import './Profile/Access-Control.scss';
+
+@import './ExportsPage/eBayPage.scss';
+@import './ExportsPage/OrderHistoryPage.scss';
+
+@import './StorePage/StorePage.scss';
+
+@import './Burger/Burger.scss';
+
+@import './Themes.scss';
+@import './ant-styles.scss';

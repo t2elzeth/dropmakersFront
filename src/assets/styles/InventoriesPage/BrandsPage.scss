@@ -1,0 +1,20 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.inventory-brands {
+  &-header {
+    display: flex;
+    align-items: center;
+    .title {
+      @include fs30;
+    }
+  }
+  .text {
+    margin: 13px 0 24px 0;
+    @include fs18;
+    line-height: 140%;
+  }
+  .cards {
+    @include flexSpaceBetween;
+  }
+}

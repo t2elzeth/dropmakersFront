@@ -1,0 +1,33 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.access-control {
+  &-header {
+    @include flexSpaceBetween;
+    .left {
+      display: flex;
+      .btn {
+        margin-right: 27px;
+        width: 72px;
+      }
+      .title {
+        @include fs30;
+      }
+    }
+    .right {
+      @include btn;
+      width: 175px;
+    }
+  }
+  .text {
+    margin-top: 28px;
+    @include fs16;
+    line-height: 150%;
+  }
+  .select {
+    @include select;
+    margin: 10px 0;
+  }
+}
+
+

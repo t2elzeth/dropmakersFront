@@ -1,0 +1,178 @@
+@import './Variables.scss';
+@import './Templates.scss';
+
+.header {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  .container {
+    @include flexSpaceBetween;
+    padding: 7px 15px 7px 0px;
+    .logo {
+      width: 278px;
+      height: 79px;
+      @media screen and (max-width: 1199px) {
+        width: 200px;
+      height: 59px;
+      }
+      svg {
+        border-radius: 20px;
+      }
+    }
+    .switcher-wrapper {
+      @media screen and (max-width: 1199px) {
+        display: none;
+      }
+    }
+    .navigation {
+      @include flexAlignCenter;
+      .ul {
+        @include flexAlignCenter;
+        margin-right: 45px;
+        .item {
+          margin-left: 16px;
+          @include fs14;
+          cursor: pointer;
+          .link-icon {
+            position: relative;
+            display: inline-block;
+            background: $blueBg;
+            width: 35px;
+            height: 35px;
+            border-radius: 6px;
+            img {
+              position: absolute;
+              top: 7px;
+              left: 2px;
+              width: 22px;
+              height: 22px;
+            }
+            .circle {
+              position: absolute;
+              right: 2px;
+              top: 2px;
+              width: 10px;
+              height: 10px;
+              border: 1px solid $yellowBg;
+              border-radius: 50%;
+            }
+          }
+        }
+        @media screen and (max-width: 1199px) {
+          display: none;
+        }
+      }
+      .flags {
+        margin: 0 55px 0 25px;
+        .flag {
+          padding: 7px 4px 7px 3px;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: all 900ms;
+          &:hover {
+            background: $blueBg;
+            color: $lightBg;
+          }
+        }
+        .flag-ru {
+          margin-left: 4px;
+        }
+        .flag-usa {
+          margin-right: 4px;
+        }
+        @media screen and (max-width: 1199px) {
+          display: none;
+        }
+      }
+      .sign {
+        @include flexAlignCenter;
+        .sign-up, .sign-in {
+          @include btn;
+          width: 72px;
+          height: 32px;
+          @include fs15; 
+          transition: all 900ms;
+          // &:hover {
+          //   border-color: $yellowBg;
+          //   background: $yellowBg;
+          //   color: $darkTextBg;
+          // }
+          @media screen and (max-width: 1199px) {
+            display: none;
+          }
+        }
+        .sign-up {
+          margin-left: 4px;
+          color: $lightBg;
+        }
+        .sign-in {
+          margin-right: 4px;
+          background: $lightBg;
+          box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+          color: $darkTextBg;
+        }
+      }
+    }
+  }
+}
+
+.private-header {
+  margin-bottom: 16px;
+  .item {
+    position: relative;
+    &:hover > .dropdown {
+      transform: translate(0,0);
+      opacity: 1;
+      pointer-events: all;
+    }
+    .link {
+      display: inline;
+    width: 35px;
+    height: 35px;
+    transition: .5s;
+    cursor: pointer;
+    }
+    .dropdown {
+      position: absolute;
+      z-index: 20;
+      top: 100%;
+      right: left;
+      width: 180px;
+      background: $blueLightBg;
+      color: $darkTextBg;
+      transform: translateY(10px);
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.5s;
+      &-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 35px;
+        transition: .5s;
+      }
+      &-item > .dropdown-item {
+        padding: 0 10px;
+        @include fs16;
+        width: 100%;
+        &:hover {
+          background: $yellowLightBg;
+        }
+        button {
+          @include fs16;
+        }
+      }
+    }
+  }
+  .item--export {
+    position: relative;
+    margin: 0px !important;
+    .dropdown  {
+      top: 0;
+      right: -100%;
+    }
+    .chevron {
+      position: absolute;
+      right: 8px;
+    }
+  }
+}

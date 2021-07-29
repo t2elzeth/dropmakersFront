@@ -1,0 +1,43 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.store {
+  &-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    div {
+      @include fs30;
+    }
+  }
+  &-item {
+    &-title {
+      margin-bottom: 8px;
+      @include fs24;
+    }
+    &-content {
+      @include flexSpaceBetween;
+      margin-bottom: 32px;
+      padding: 24px 8px;
+      background: $blueLightBg;
+      color: $darkTextBg;
+      .name {
+        @include fs20;
+      }
+      .btn {
+        @include btn;
+        width: 175px;
+      }
+    }
+  }
+  .pay-methods {
+    @include flexSpaceBetween;
+    .title {
+      @include fs24;
+    }
+    .btn {
+      @include btn;
+      width: 175px;
+    }
+  }
+}

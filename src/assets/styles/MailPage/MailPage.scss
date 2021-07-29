@@ -1,0 +1,56 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.mail {
+  position: relative;
+  &-header {
+    @include flexSpaceBetween;
+    margin-bottom: 16px;
+    @include fs16;
+    div {
+      &:nth-child(1) {
+        @include fs30;
+      }
+    }
+  }
+  .sidebar {
+    color: $darkTextBg;
+    .navigation {
+      padding: 8px 0;
+      width: 278px;
+      background: $blueLightBg;
+      ul {
+        display: flex;
+        flex-direction: column;
+        .item {
+          .link {
+            display: inline-block;
+            width: 100%;
+            padding: 8px 0 5px 32px;
+            transition: .5s;
+            &:hover {
+              background: $yellowLightBg;
+            }
+          }
+          .active {
+            background: $yellowBg;
+            &:hover {
+              background: $yellowBg;
+            }
+          }
+        }
+      }
+    }
+    .navigation-2 {
+      margin-top: 16px;
+      height: 259px;
+      padding: 16px 0 0 32px;
+    }
+  }
+  &-content {
+    display: flex;
+    .letters {
+      margin-left: 50px;
+    }
+  }
+}

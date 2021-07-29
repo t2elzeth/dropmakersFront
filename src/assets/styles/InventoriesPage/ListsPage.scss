@@ -1,0 +1,19 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.inventory-lists {
+  .title {
+    @include fs30;
+  }
+  .text {
+    @include fs18;
+    line-height: 140%;
+    margin-bottom: 8px;
+  }
+  .text--1 {
+    margin: 16px 0;
+  }
+  .text--4 {
+    margin-bottom: 16px;
+  }
+}

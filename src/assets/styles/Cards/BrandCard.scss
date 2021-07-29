@@ -1,0 +1,34 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.brand-card {
+  padding: 16px;
+  background: $blueLightBg;
+  color: $darkTextBg;
+  width: 380px;
+  border-radius: 6px;
+  .title {
+    text-align: center;
+    @include fs24;
+  }
+  .title-2 {
+    text-align: center;
+    margin-top: 16px;
+    @include fs18;
+  }
+  .inputs {
+    @include flexSpaceBetween;
+    margin-top: 16px;
+    div {
+      @include input;
+      @include flexCenter;
+      background: $lightBg;
+      &:nth-child(1) {
+        width: 232px;
+      }
+      &:nth-child(2) {
+        width: 104px;
+      }
+    }
+  }
+}

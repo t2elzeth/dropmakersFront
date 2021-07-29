@@ -1,0 +1,21 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.search-wrapper {
+  .title {
+    margin: 0 0 16px 0;
+    @include fs30;
+    border-radius: 6px;
+  }
+  .search-result {
+    @include flexSpaceBetween;
+    align-items: flex-start;
+    .item {
+      .result-title {
+        text-align: center;
+        margin: 16px 0;
+        @include fs30;
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.modal {
+  width: 100%;
+  &-title {
+    text-align: center;
+    margin-bottom: 24px;
+    @include fs20;
+  }
+  &-text {
+    @include fs18;
+    text-align: center
+  }
+  &-input {
+    @include input;
+    display: block;
+    margin: 15px 0;
+    width: 100%;
+  }
+  &-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    svg {
+      margin-right: 5px
+    }
+    p {
+      @include fs18;
+      margin-left: 5px;
+    }
+  }
+  &-btns {
+    @include flexSpaceBetween;
+    .btn {
+      @include btn;
+      width: 147px;
+    }
+  }
+  &-btns--payment {
+    justify-content: center;
+    .btn {
+      width: 200px;
+    }
+  }
+}
+
+.ant-modal-content {
+  background-color: $blueLightBg !important;
+}

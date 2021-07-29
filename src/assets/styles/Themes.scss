@@ -1,0 +1,192 @@
+@import './Variables.scss';
+
+// Styles for light theme 
+.page {
+  background: $lightBg;
+  color: $darkTextBg;
+  transition: all 500ms linear;
+  .header {
+    .navigation {
+      .item {
+        a {
+          transition: all 500ms;
+          // &:hover {
+          //   color: $blueBg;
+          // }
+        }
+        .active {
+          color: $blueBg;
+          &:hover {
+            color: $blueBg !important;
+          }
+        }
+      }
+      .item--inventory, .item--order, .item--report {
+        .link {
+          &:hover {
+            color: $darkTextBg;
+          }
+        }
+        .dropdown-item {
+          .active {
+            background: $yellowBg;
+            color: $darkTextBg;
+            &:hover {
+              color:$darkTextBg !important;
+            }
+          }
+        }
+      }
+      .flags {
+        .flag {
+          border: 1px solid $borderBg;
+        }
+      }
+      .sign {
+        .sign-in {
+          border: 1px solid $borderBg;
+        }
+      }
+    }
+    .switcher-wrapper {
+      .switcher {
+        background: rgb(150, 149, 149);
+      }
+    }
+  }
+  .steps {
+    &-item {
+      .item {
+        &-number {
+          background: $blueBg;
+          color: $lightBg;
+        }
+      }
+    }
+  }
+  .contactsForm {
+    .form {
+      .btn {
+        background: $blueBg;
+        color: $lightBg;
+      }
+    }
+  }
+  .burger {
+    span {
+      background: $darkBg;
+    }
+  }
+}
+
+// Styles from dark theme
+.theme-dark {
+  background: $darkBg;
+  background: rgb(24, 24, 24);
+  color: $lightBg;
+  h1, h2 {
+    color: $lightBg;
+  }
+  svg {
+    path {
+      stroke: $yellowBg;
+    }
+  }
+  .header {
+    .navigation {
+      .item--inventory, .item--order, .item--report {
+        .link {
+          &:hover {
+            color: $lightBg;
+          }
+        }
+      }
+      .item {
+        .active {
+          color: $yellowBg;
+          &:hover {
+            color: $yellowBg !important;
+          }
+        }
+      }
+      .flags {
+        .flag {
+          border: 1px solid $yellowBg;
+        }
+      }
+      .sign {
+        .sign-in {
+          border: none;
+        }
+      }
+    }
+    .switcher-wrapper {
+      .switcher {
+        background: $yellowBg;
+      }
+    }
+  }
+  .steps {
+    &-item {
+      .item {
+        &-number {
+          background: $yellowBg;
+          color: $darkTextBg;
+        }
+      }
+    }
+  }
+  .contactsForm {
+    .form {
+      .btn {
+        background: $yellowBg;
+        color: $darkTextBg;
+      }
+    }
+  }
+  .burger {
+    span {
+      background: $lightBg;
+    }
+    &-icon--active {
+      span {
+        background: $darkBg;
+      }
+    }
+  }
+}
+
+
+// Fallback
+.fallback {
+  @include flexCenter;
+  @include fs48;
+  width: 100%;
+  height: 100vh;
+  &-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 3px solid #f3f3f3; 
+    border-top: 8px solid $yellowBg; 
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin .7s linear infinite;
+  }
+  @keyframes spin {
+    0% { transform:translate(-50%, -50%)  rotate(0deg) }
+    100% { transform:translate(-50%, -50%)  rotate(360deg)}
+  }
+}
+.fallback-light {
+  background: $lightBg;
+  color: $darkTextBg;
+}
+.fallback-dark {
+  background: black;
+  color: $lightBg;
+}
+
+
+

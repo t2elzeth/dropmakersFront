@@ -1,0 +1,18 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.notifications {
+  &-header {
+    display: flex;
+    margin-bottom: 16px;
+    .btn {
+      @include btn;
+      margin-right: 27px;
+      width: 73px;
+      height: 40px;
+    }
+    .title {
+      @include fs30;
+    }
+  }
+}

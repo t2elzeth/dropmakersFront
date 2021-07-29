@@ -1,0 +1,43 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.steps {
+  padding: 156px 0 68px 0;
+  &-item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 34px;
+    @media screen and (max-width: 1199px) {
+      grid-template-columns: 1fr;
+    }
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 10px;
+      &-number {
+        text-align: center;
+        @include flexCenter;
+        height: 48px;
+        width: 48px;
+        border: 1px solid $blueBg;
+        border-radius: 50%;
+      }
+      &-title {
+        text-align: center;
+        margin: 12px 0 8px 0;
+        @include fs28;
+      }
+      &-text {
+        text-align: center;
+        font-weight: 300;
+        @include fs18;
+        line-height: 140%;
+        @media screen and (max-width: 1199px) {
+          max-width: 585px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
