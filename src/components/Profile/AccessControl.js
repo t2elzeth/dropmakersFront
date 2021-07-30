@@ -27,8 +27,7 @@ const AccessControl = () => {
     setReload(false)
     if (accessList === 'AccessMe') {
       dispatch(handleGetControlMeActionCreator(setReload))
-    }
-    if (accessList === 'AccessThem') {
+    } else if (accessList === 'AccessThem') {
       dispatch(handleGetControlThemActionCreator())
     }
   }, [accessList, dispatch, reload])
