@@ -4,7 +4,7 @@ import {GET_RESULTS, GET_RESULTS_FAILED, GET_RESULTS_LOADING, GET_RESULTS_SUCCES
 
 export const handleResultsAcionCreater = (query) => dispatch => {
   dispatch({type: GET_RESULTS_LOADING})
-  ebay.post('/search/', {query})
+  ebay.post('/finding/', {query})
     .then(data => {
       dispatch(getResults(data.data))
       dispatch({type: GET_RESULTS_SUCCESS})
